@@ -1,16 +1,11 @@
 import './App.css'
-import SearchPost from './components/SearchPost/Searchpost'
+import Counter from './components/Reducer/Counter'
+
 
 function App() {
-  
-  
-
   return (
     <section>
-      
-      <SearchPost />
-
-
+      <Counter />
     </section>
   )
 }
