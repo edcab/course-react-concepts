@@ -1,25 +1,39 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
-const Userlist = () => {
+const UserList = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [users, setUsers] = useState([]);
 
-  const [users, setUsers] = useState([])
+  useEffect(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then((response) => response.json())
+      .then((data) => {
+        setUsers(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error(error);
+        setIsLoading(false);
+      });
+    }, 2000);
+  }, []);
 
-  fetch('https://jsonplaceholder.typicode.com/users')
-  .then(response => response.json())
-  .then(data => setUsers(data))
-  .catch(error => console.error(error))
-    return (
-        <div>
-          <h2>Dynamic Component</h2>
-            <ul>
-              {
-                users.map((user) => (
-                  <li key={user.id}>{user.name}</li>
-                ))
-              }
-            </ul>
-        </div>
-    )
-}
+  return (
+    <div>
+      <h2>Dynamic Component</h2>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <ul>
+          {users.map((user) => (
+            <li key={user.id}>{user.name}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
 
-export default Userlist
+export default UserList;
