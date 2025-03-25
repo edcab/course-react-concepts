@@ -9,6 +9,7 @@ import ToogleButton from './components/ToggleButton'
 import NameForm from './components/NameForm'
 import CounterWithEffect from './components/CounterWithEffect'
 import StaticComponent from './components/StaticComponent/StaticComponent'
+import Userlist from './components/DinamicComponent/DinamicComponent'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -30,6 +31,8 @@ function App() {
       <Card2 title="Card Title" description="Card Description" cssClass="card2" />
 
       <StaticComponent />
+      <Userlist />
+
 
     </section>
   )
