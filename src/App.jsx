@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Card from './components/Card'
+import Card2 from './components/Card/Card2'
 import Counter from './components/Counter'
 import ToogleButton from './components/ToggleButton'
 import NameForm from './components/NameForm'
@@ -24,6 +25,8 @@ function App() {
       <NameForm/>
       <h2>Counter with effect console log</h2>
       <CounterWithEffect />
+      <h2>Card with a different css</h2>
+      <Card2 title="Card Title" description="Card Description" cssClass="card2" />
 
     </section>
   )
