@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Card from './components/Card'
+import Counter from './components/Counter'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,8 +14,8 @@ function App() {
       <img src={reactLogo} alt="React Logo" />
       <img src={viteLogo} alt="Vite Logo" />
       <Card title="Card Title" description="Card Description" />
-      <Card title="Card Title 2" description="Card Description 2" />
-      <button onClick={() => setCount(count + 1)}>Count: {count}</button>
+      
+      <Counter count={count} setCount={setCount} />
     </section>
   )
 }
