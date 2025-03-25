@@ -8,6 +8,7 @@ import Counter from './components/Counter'
 import ToogleButton from './components/ToggleButton'
 import NameForm from './components/NameForm'
 import CounterWithEffect from './components/CounterWithEffect'
+import StaticComponent from './components/StaticComponent/StaticComponent'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,6 +28,8 @@ function App() {
       <CounterWithEffect />
       <h2>Card with a different css</h2>
       <Card2 title="Card Title" description="Card Description" cssClass="card2" />
+
+      <StaticComponent />
 
     </section>
   )
