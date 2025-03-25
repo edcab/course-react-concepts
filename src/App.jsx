@@ -6,6 +6,7 @@ import Card from './components/Card'
 import Counter from './components/Counter'
 import ToogleButton from './components/ToggleButton'
 import NameForm from './components/NameForm'
+import CounterWithEffect from './components/CounterWithEffect'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,6 +22,8 @@ function App() {
       <ToogleButton />
       <h2>Name form</h2>
       <NameForm/>
+      <h2>Counter with effect console log</h2>
+      <CounterWithEffect />
 
     </section>
   )
