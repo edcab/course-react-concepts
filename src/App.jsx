@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Card from './components/Card'
 import Counter from './components/Counter'
+import ToogleButton from './components/ToggleButton'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,8 +15,10 @@ function App() {
       <img src={reactLogo} alt="React Logo" />
       <img src={viteLogo} alt="Vite Logo" />
       <Card title="Card Title" description="Card Description" />
-      
       <Counter count={count} setCount={setCount} />
+      <h2>Toggle button</h2>
+      <ToogleButton />
+
     </section>
   )
 }
